@@ -88,6 +88,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -139,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nbody[data-v-fa6affac] {\r\n    margin-top: 20px;\r\n    background: #eee;\n}\n.menuLink[data-v-fa6affac]{\r\n    font-weight: bold;\r\n    margin: 1rem 0;\r\n    font-size: 1rem;\n}\n.service-container[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container .icon[data-v-fa6affac] {\r\n    margin-top: 5%;\r\n    font-size: 38px;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .icon-2[data-v-fa6affac] {\r\n    height: 70px;\r\n    width: 70px;\r\n    line-height: 80px;\r\n    border-radius: 64% 36% 55% 45% / 76% 72% 28% 24% !important;\r\n    border-color: #f89d36 !important;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .icon-2 i[data-v-fa6affac] {\r\n    font-size: 30px;\n}\n.service-container .number-icon .number[data-v-fa6affac] {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 70px;\r\n    left: 0;\r\n    height: 35px;\r\n    width: 35px;\r\n    margin: 0 auto;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .number span[data-v-fa6affac] {\r\n    line-height: 30px;\n}\n.service-container .content .number[data-v-fa6affac] {\r\n    font-size: 40px;\r\n    color: #dee2e6;\n}\n.service-container .content .title[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container.hover-bg[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container.hover-bg .smooth-icon[data-v-fa6affac] {\r\n    position: absolute;\r\n    bottom: -40px;\r\n    right: -20px;\r\n    font-size: 60px;\r\n    color: #f8f9fa;\r\n    transition: all 0.8s ease;\n}\n.service-container.hover-bg[data-v-fa6affac]:hover {\r\n    background-color: #f89d36;\n}\n.service-container.hover-bg:hover .content .title[data-v-fa6affac] {\r\n    color: #ffffff !important;\n}\n.service-container.hover-bg:hover .content .serv-pera[data-v-fa6affac] {\r\n    color: #fafafb !important;\n}\n.service-container.hover-bg:hover .smooth-icon[data-v-fa6affac] {\r\n    font-size: 100px;\r\n    opacity: 0.2;\r\n    bottom: -20px;\r\n    right: 10px;\n}\n.service-container[data-v-fa6affac]:hover {\r\n    background-color: #ffffff;\r\n    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;\n}\n.service-container:hover .icon[data-v-fa6affac] {\r\n    color: #f89d36;\r\n    -webkit-animation: mover-data-v-fa6affac 1s infinite alternate;\r\n    animation: mover-data-v-fa6affac 1s infinite alternate;\n}\n.service-container:hover .number-icon .icon-2[data-v-fa6affac] {\r\n    background-color: #f89d36;\r\n    border-radius: 50% !important;\n}\n.service-container:hover .number-icon .icon-2 i[data-v-fa6affac] {\r\n    color: #ffffff !important;\n}\n.service-container:hover .number-icon .number[data-v-fa6affac] {\r\n    color: #ffffff;\r\n    background: #f89d36 !important;\r\n    border-color: #ffffff !important;\n}\n.service-container:hover .content .title[data-v-fa6affac] {\r\n    color: #f89d36;\n}\n.service-container a[data-v-fa6affac]:hover,\r\n.service-container a .title[data-v-fa6affac]:hover {\r\n    color: #f89d36 !important;\n}\n@-webkit-keyframes mover-data-v-fa6affac {\n0% {\r\n        transform: translateY(0);\n}\n100% {\r\n        transform: translateY(-15px);\n}\n}\n@keyframes mover-data-v-fa6affac {\n0% {\r\n        transform: translateY(0);\n}\n100% {\r\n        transform: translateY(-15px);\n}\n}\n.service-wrapper[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-wrapper .icon[data-v-fa6affac] {\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 45px;\r\n    transition: all 0.5s ease;\n}\n.service-wrapper .content .title[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\r\n    font-weight: 500;\n}\n.service-wrapper .big-icon[data-v-fa6affac] {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 0;\r\n    opacity: 0.05;\r\n    transition: all 0.5s ease;\n}\n.service-wrapper[data-v-fa6affac]:hover {\r\n    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;\r\n    background: #ffffff;\r\n    transform: translateY(-8px);\r\n    border-color: transparent !important;\n}\n.service-wrapper:hover .icon[data-v-fa6affac] {\r\n    background: #0062ff !important;\r\n    color: #ffffff !important;\n}\n.service-wrapper:hover .big-icon[data-v-fa6affac] {\r\n    z-index: -1;\r\n    opacity: 0.1;\r\n    font-size: 160px;\n}\n.text-custom[data-v-fa6affac] {\r\n    color: #0062ff !important;\n}\n.uim-svg[data-v-fa6affac] {\r\n    display: inline-block;\r\n    height: 1em;\r\n    vertical-align: -0.125em;\r\n    font-size: inherit;\r\n    fill: var(--uim-color, currentColor);\n}\nh4.title[data-v-fa6affac]{\r\n    margin: 1rem 0;\n}\n.teamSection[data-v-fa6affac] {\r\n    border-top: 1px solid #00000020;\r\n    margin: 1rem 0;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nbody[data-v-fa6affac] {\r\n    margin-top: 20px;\r\n    background: #eee;\n}\n.menuLink[data-v-fa6affac]{\r\n    font-weight: bold;\r\n    margin: 1rem 0;\r\n    font-size: 1rem;\n}\n.service-container[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container .icon[data-v-fa6affac] {\r\n    margin-top: 5%;\r\n    font-size: 38px;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .icon-2[data-v-fa6affac] {\r\n    height: 70px;\r\n    width: 70px;\r\n    line-height: 80px;\r\n    border-radius: 64% 36% 55% 45% / 76% 72% 28% 24% !important;\r\n    border-color: #f89d36 !important;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .icon-2 i[data-v-fa6affac] {\r\n    font-size: 30px;\n}\n.service-container .number-icon .number[data-v-fa6affac] {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 70px;\r\n    left: 0;\r\n    height: 35px;\r\n    width: 35px;\r\n    margin: 0 auto;\r\n    transition: all 0.5s ease;\n}\n.service-container .number-icon .number span[data-v-fa6affac] {\r\n    line-height: 30px;\n}\n.service-container .content .number[data-v-fa6affac] {\r\n    font-size: 40px;\r\n    color: #dee2e6;\n}\n.service-container .content .title[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container.hover-bg[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-container.hover-bg .smooth-icon[data-v-fa6affac] {\r\n    position: absolute;\r\n    bottom: -40px;\r\n    right: -20px;\r\n    font-size: 60px;\r\n    color: #f8f9fa;\r\n    transition: all 0.8s ease;\n}\n.service-container.hover-bg[data-v-fa6affac]:hover {\r\n    background-color: #f89d36;\n}\n.service-container.hover-bg:hover .content .title[data-v-fa6affac] {\r\n    color: #ffffff !important;\n}\n.service-container.hover-bg:hover .content .serv-pera[data-v-fa6affac] {\r\n    color: #fafafb !important;\n}\n.service-container.hover-bg:hover .smooth-icon[data-v-fa6affac] {\r\n    font-size: 100px;\r\n    opacity: 0.2;\r\n    bottom: -20px;\r\n    right: 10px;\n}\n.service-container[data-v-fa6affac]:hover {\r\n    background-color: #ffffff;\r\n    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;\n}\n.service-container:hover .icon[data-v-fa6affac] {\r\n    color: #f89d36;\r\n    -webkit-animation: mover-data-v-fa6affac 1s infinite alternate;\r\n    animation: mover-data-v-fa6affac 1s infinite alternate;\n}\n.service-container:hover .number-icon .icon-2[data-v-fa6affac] {\r\n    background-color: #f89d36;\r\n    border-radius: 50% !important;\n}\n.service-container:hover .number-icon .icon-2 i[data-v-fa6affac] {\r\n    color: #ffffff !important;\n}\n.service-container:hover .number-icon .number[data-v-fa6affac] {\r\n    color: #ffffff;\r\n    background: #f89d36 !important;\r\n    border-color: #ffffff !important;\n}\n.service-container:hover .content .title[data-v-fa6affac] {\r\n    color: #f89d36;\n}\n.service-container a[data-v-fa6affac]:hover,\r\n.service-container a .title[data-v-fa6affac]:hover {\r\n    color: #f89d36 !important;\n}\n@-webkit-keyframes mover-data-v-fa6affac {\n0% {\r\n        transform: translateY(0);\n}\n100% {\r\n        transform: translateY(-15px);\n}\n}\n@keyframes mover-data-v-fa6affac {\n0% {\r\n        transform: translateY(0);\n}\n100% {\r\n        transform: translateY(-15px);\n}\n}\n.service-wrapper[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\n}\n.service-wrapper .icon[data-v-fa6affac] {\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 45px;\r\n    transition: all 0.5s ease;\n}\n.service-wrapper .content .title[data-v-fa6affac] {\r\n    transition: all 0.5s ease;\r\n    font-weight: 500;\n}\n.service-wrapper .big-icon[data-v-fa6affac] {\r\n    position: absolute;\r\n    right: 0;\r\n    bottom: 0;\r\n    opacity: 0.05;\r\n    transition: all 0.5s ease;\n}\n.service-wrapper[data-v-fa6affac]:hover {\r\n    box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;\r\n    background: #ffffff;\r\n    transform: translateY(-8px);\r\n    border-color: transparent !important;\n}\n.service-wrapper:hover .icon[data-v-fa6affac] {\r\n    background: #0062ff !important;\r\n    color: #ffffff !important;\n}\n.service-wrapper:hover .big-icon[data-v-fa6affac] {\r\n    z-index: -1;\r\n    opacity: 0.1;\r\n    font-size: 160px;\n}\n.text-custom[data-v-fa6affac] {\r\n    color: #0062ff !important;\n}\n.uim-svg[data-v-fa6affac] {\r\n    display: inline-block;\r\n    height: 1em;\r\n    vertical-align: -0.125em;\r\n    font-size: inherit;\r\n    fill: var(--uim-color, currentColor);\n}\nh4.title[data-v-fa6affac]{\r\n    margin: 1rem 0;\n}\n.teamSection[data-v-fa6affac] {\r\n    border-top: 1px solid #00000020;\r\n    margin: 1rem 0;\n}\n.radius-15[data-v-fa6affac] {\r\n    border-radius: 15px;\n}\n.card[data-v-fa6affac] {\r\n    position: relative;\r\n    display: flex;\r\n    flex-direction: column;\r\n    min-width: 0;\r\n    word-wrap: break-word;\r\n    background-color: #fff;\r\n    background-clip: border-box;\r\n    border: 0px solid rgba(0, 0, 0, 0);\r\n    border-radius: .25rem;\r\n    margin-bottom: 1.5rem;\r\n    box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);\n}\nelement.style[data-v-fa6affac] {\n}\n.list-inline-item[data-v-fa6affac]:not(:last-child) {\r\n    margin-right: .5rem;\n}\n.contacts-social a[data-v-fa6affac] {\r\n    background: #ffffff;\r\n    border: 1px solid #eeecec;\r\n    text-align: center;\r\n    border-radius: 50%;\r\n    color: #2b2a2a;\n}\n.contacts-social a img[data-v-fa6affac] {\r\n    width: 30px ;\n}\n.bg-facebook[data-v-fa6affac] {\r\n    background-color: #3b5998!important;\n}\n.bg-twitter[data-v-fa6affac] {\r\n    background-color: #55acee!important;\n}\n.bg-linkedin[data-v-fa6affac] {\r\n    background-color: #0976b4!important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -828,28 +829,39 @@ var staticRenderFns = [
       _c(
         "a",
         {
-          staticClass: "list-inline-item bg-facebook text-white border-0",
-          attrs: { href: "javascript:;" },
+          attrs: {
+            href: "https://cdnlogo.com/logo/facebook-circle-icon_428.html",
+          },
         },
-        [_c("i", { staticClass: "bx bxl-facebook" })]
+        [
+          _c("img", {
+            attrs: { src: "https://cdn.cdnlogo.com/logos/f/83/facebook.svg" },
+          }),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { attrs: { href: "https://cdnlogo.com/logo/twitter_500.html" } },
+        [
+          _c("img", {
+            attrs: { src: "https://cdn.cdnlogo.com/logos/t/39/twitter.svg" },
+          }),
+        ]
       ),
       _vm._v(" "),
       _c(
         "a",
         {
-          staticClass: "list-inline-item bg-twitter text-white border-0",
-          attrs: { href: "javascript:;" },
+          attrs: { href: "https://cdnlogo.com/logo/linkedin-icon_39431.html" },
         },
-        [_c("i", { staticClass: "fa fa-twitter" })]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "list-inline-item bg-linkedin text-white border-0",
-          attrs: { href: "javascript:;" },
-        },
-        [_c("i", { staticClass: "bx bxl-linkedin" })]
+        [
+          _c("img", {
+            attrs: {
+              src: "https://cdn.cdnlogo.com/logos/l/78/linkedin-icon.svg",
+            },
+          }),
+        ]
       ),
     ])
   },

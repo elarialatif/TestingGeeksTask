@@ -131,6 +131,10 @@ class ApiController extends Controller
                 'avatar'=>'https://bootdey.com/img/Content/avatar/avatar2.png',
             ],
         ];
-        return response()->json(['recentlyStories'=>$recentlyAddedList,'viewedStories'=>$viewedList,'success'=>true]);
+        $currentUser = [
+            'name' => 'John Doe',
+            'avatar'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
+        ];
+        return response()->json(['currentUser'=>$currentUser,'recentlyStories'=>$recentlyAddedList,'viewedStories'=>$viewedList,'success'=>true]);
     }
 }

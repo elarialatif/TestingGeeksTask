@@ -12,7 +12,7 @@
                 </div>
             </div>
             <!-- Card -->
-            <div class="row">
+            <div class="row storiesCard">
                 <div class="col-lg-4 layout-spacing">
                     <div class="statbox widget box box-shadow">
                         <div class="widget-header">
@@ -29,10 +29,10 @@
                                         <div class="story-container-2">
                                             <div class="single-story">
                                                 <div class="story-dp">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png">
+                                                    <img :src="currentUserAvatar">
                                                 </div>
                                                 <div class="story-author">
-                                                    <p class="name">John Doe</p>
+                                                    <p class="name">{{ currentUserName }}</p>
                                                     <p class="time">Tap to add a story</p>
                                                 </div>
                                             </div>
@@ -75,6 +75,8 @@ export default {
         return {
             recentlyStories: [],
             viewedStories: [],
+            currentUserName: "",
+            currentUserAvatar: "",
         }
     },
     methods: {
@@ -94,11 +96,21 @@ export default {
                 console.log(err)
             })
         },
+        getCurrentUser(){
+            axios.get('/api/currentUser').then(res => {
+                if (res.data.success === true)
+                    this.currentUserName = res.data.currentUser.name;
+                    this.currentUserAvatar = res.data.currentUser.avatar;
+            }).catch(err => {
+                console.log(err)
+            })
+        }
 
     },
     mounted() {
         this.getRecentlyStoriesList();
         this.getViewedStoriesList();
+        this.getCurrentUser();
     }
 };
 </script>
@@ -106,6 +118,9 @@ export default {
 body{
     background:#eee;
     margin-top:20px;
+}
+.storiesCard {
+    margin-bottom: 1rem;;
 }
 .menuLink{
     font-weight: bold;
