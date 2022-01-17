@@ -101,7 +101,6 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/features').then(function (res) {
         if (res.data.success === true) _this.features = res.data.features;
-        console.log(_this.features);
       })["catch"](function (err) {
         console.log(err);
       });

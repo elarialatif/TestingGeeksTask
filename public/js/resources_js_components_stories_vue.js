@@ -82,94 +82,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {};
+    return {
+      recentlyStories: [],
+      viewedStories: []
+    };
   },
-  methods: {},
-  mounted: function mounted() {}
+  methods: {
+    getRecentlyStoriesList: function getRecentlyStoriesList() {
+      var _this = this;
+
+      axios.get('/api/recentlyStories').then(function (res) {
+        if (res.data.success === true) _this.recentlyStories = res.data.recentlyStories;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getViewedStoriesList: function getViewedStoriesList() {
+      var _this2 = this;
+
+      axios.get('/api/viewedStories').then(function (res) {
+        if (res.data.success === true) _this2.viewedStories = res.data.viewedStories;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getRecentlyStoriesList();
+    this.getViewedStoriesList();
+  }
 });
 
 /***/ }),
@@ -190,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nbody[data-v-0d64ff50]{\r\n    background:#eee;\r\n    margin-top:20px;\n}\n.widget[data-v-0d64ff50] {\r\n    padding: 0;\r\n    margin-top: 0;\r\n    margin-bottom: 0;\r\n    border-radius: 6px;\r\n    box-shadow: 0 4px 6px 0 rgb(85 85 85 / 8%), 0 1px 20px 0 rgb(0 0 0 / 7%), 0px 1px 11px 0px rgb(0 0 0 / 7%);\n}\n.widget.box .widget-header[data-v-0d64ff50] {\r\n    background: #fff;\r\n    padding: 0px 8px 0px;\r\n    border-top-right-radius: 6px;\r\n    border-top-left-radius: 6px;\n}\n.widget .widget-header[data-v-0d64ff50] {\r\n    border-bottom: 0px solid #f1f2f3;\n}\n.widget.box .widget-header[data-v-0d64ff50] {\r\n    background: #fff;\r\n    padding: 0px 8px 0px;\r\n    border-top-right-radius: 6px;\r\n    border-top-left-radius: 6px;\n}\n.widget .widget-header[data-v-0d64ff50] {\r\n    border-bottom: 0px solid #f1f2f3;\n}\n.widget .widget-header[data-v-0d64ff50]:after {\r\n    clear: both;\n}\n.widget .widget-header[data-v-0d64ff50]:before, .widget .widget-header[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\n}\n.widget-content-area[data-v-0d64ff50] {\r\n    padding: 20px;\r\n    position: relative;\r\n    background-color: #fff;\r\n    border-bottom-left-radius: 6px;\r\n    border-bottom-right-radius: 6px;\n}\n.statbox .widget-content[data-v-0d64ff50]:before, .statbox .widget-content[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\r\n    clear: both;\n}\n.statbox .widget-content[data-v-0d64ff50]:before, .statbox .widget-content[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\r\n    clear: both;\n}\n.story-container-2 .single-story[data-v-0d64ff50] {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 10px;\n}\n.story-container-2 .story-dp[data-v-0d64ff50] {\r\n    height: 50px;\r\n    width: 50px;\r\n    position: relative;\r\n    border-radius: 50%;\r\n    margin-right: 15px;\r\n    padding: 3px;\n}\n.story-container-2 .story-dp img[data-v-0d64ff50] {\r\n    height: 100%;\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    border-radius: 50%;\n}\n.story-container-2 .story-author p.name[data-v-0d64ff50] {\r\n    margin-bottom: 0px;\r\n    font-weight: 600;\r\n    font-size: 13px;\n}\n.story-container-2 .story-author p.time[data-v-0d64ff50] {\r\n    margin-bottom: 0px;\r\n    font-weight: 500;\r\n    font-size: 12px;\n}\n.story-container-2 .story-dp img.add-story[data-v-0d64ff50] {\r\n    position: absolute;\r\n    height: 19px !important;\r\n    width: 19px !important;\r\n    right: -3px;\n}\n.story-container-2 .story-dp img[data-v-0d64ff50] {\r\n    height: 100%;\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    border-radius: 50%;\n}\n.story-container-2 p.divider[data-v-0d64ff50] {\r\n    margin: 10px 0px 10px 0px;\r\n    font-weight: 600;\r\n    font-size: 12px;\r\n    color: #404040;\n}\n.widget.box .widget-footer[data-v-0d64ff50] {\r\n    padding: 2rem 2.25rem;\r\n    background-color: #ffffff;\r\n    border-top: 1px solid #EBEDF3;\n}\n.bg-light-primary[data-v-0d64ff50] {\r\n    background-color: #f6f1ff!important;\r\n    border-color: #f6f1ff;\r\n    color: #5526ab;\n}\r\n\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nbody[data-v-0d64ff50]{\r\n    background:#eee;\r\n    margin-top:20px;\n}\n.menuLink[data-v-0d64ff50]{\r\n    font-weight: bold;\r\n    margin: 1rem 0;\r\n    font-size: 1rem;\n}\n.widget[data-v-0d64ff50] {\r\n    padding: 0;\r\n    margin-top: 0;\r\n    margin-bottom: 0;\r\n    border-radius: 6px;\r\n    box-shadow: 0 4px 6px 0 rgb(85 85 85 / 8%), 0 1px 20px 0 rgb(0 0 0 / 7%), 0px 1px 11px 0px rgb(0 0 0 / 7%);\n}\n.widget.box .widget-header[data-v-0d64ff50] {\r\n    background: #fff;\r\n    padding: 0px 8px 0px;\r\n    border-top-right-radius: 6px;\r\n    border-top-left-radius: 6px;\n}\n.widget .widget-header[data-v-0d64ff50] {\r\n    border-bottom: 0px solid #f1f2f3;\n}\n.widget.box .widget-header[data-v-0d64ff50] {\r\n    background: #fff;\r\n    padding: 0px 8px 0px;\r\n    border-top-right-radius: 6px;\r\n    border-top-left-radius: 6px;\n}\n.widget .widget-header[data-v-0d64ff50] {\r\n    border-bottom: 0px solid #f1f2f3;\n}\n.widget .widget-header[data-v-0d64ff50]:after {\r\n    clear: both;\n}\n.widget .widget-header[data-v-0d64ff50]:before, .widget .widget-header[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\n}\n.widget-content-area[data-v-0d64ff50] {\r\n    padding: 20px;\r\n    position: relative;\r\n    background-color: #fff;\r\n    border-bottom-left-radius: 6px;\r\n    border-bottom-right-radius: 6px;\n}\n.statbox .widget-content[data-v-0d64ff50]:before, .statbox .widget-content[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\r\n    clear: both;\n}\n.statbox .widget-content[data-v-0d64ff50]:before, .statbox .widget-content[data-v-0d64ff50]:after {\r\n    display: table;\r\n    content: \"\";\r\n    line-height: 0;\r\n    clear: both;\n}\n.story-container-2 .single-story[data-v-0d64ff50] {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 10px;\n}\n.story-container-2 .story-dp[data-v-0d64ff50] {\r\n    height: 50px;\r\n    width: 50px;\r\n    position: relative;\r\n    border-radius: 50%;\r\n    margin-right: 15px;\r\n    padding: 3px;\n}\n.story-container-2 .story-dp img[data-v-0d64ff50] {\r\n    height: 100%;\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    border-radius: 50%;\n}\n.story-container-2 .story-author p.name[data-v-0d64ff50] {\r\n    margin-bottom: 0px;\r\n    font-weight: 600;\r\n    font-size: 13px;\n}\n.story-container-2 .story-author p.time[data-v-0d64ff50] {\r\n    margin-bottom: 0px;\r\n    font-weight: 500;\r\n    font-size: 12px;\n}\n.story-container-2 .story-dp img.add-story[data-v-0d64ff50] {\r\n    position: absolute;\r\n    height: 19px !important;\r\n    width: 19px !important;\r\n    right: -3px;\n}\n.story-container-2 .story-dp img[data-v-0d64ff50] {\r\n    height: 100%;\r\n    width: 100%;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    border-radius: 50%;\n}\n.story-container-2 p.divider[data-v-0d64ff50] {\r\n    margin: 10px 0px 10px 0px;\r\n    font-weight: 600;\r\n    font-size: 12px;\r\n    color: #404040;\n}\n.widget.box .widget-footer[data-v-0d64ff50] {\r\n    padding: 2rem 2.25rem;\r\n    background-color: #ffffff;\r\n    border-top: 1px solid #EBEDF3;\n}\n.bg-light-primary[data-v-0d64ff50] {\r\n    background-color: #f6f1ff!important;\r\n    border-color: #f6f1ff;\r\n    color: #5526ab;\n}\r\n\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -677,322 +620,163 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "row" },
+        [
+          _c(
+            "router-link",
+            { staticClass: "menuLink", attrs: { to: "/home" } },
+            [_vm._v("Home")]
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-4 layout-spacing" }, [
+          _c("div", { staticClass: "statbox widget box box-shadow" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "widget-content widget-content-area" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12" }, [
+                  _c(
+                    "div",
+                    { staticClass: "tabcontent", attrs: { id: "content_2" } },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "story-container-2" },
+                        [
+                          _vm._m(2),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "divider" }, [
+                            _vm._v("Recently Added"),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(
+                            _vm.recentlyStories,
+                            function (recentlyStory, index) {
+                              return _c(
+                                "div",
+                                { key: index, staticClass: "single-story" },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "story-dp unseen" },
+                                    [
+                                      _c("img", {
+                                        attrs: { src: recentlyStory.avatar },
+                                      }),
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "story-author" }, [
+                                    _c("p", { staticClass: "name" }, [
+                                      _vm._v(_vm._s(recentlyStory.name)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("p", { staticClass: "time" }, [
+                                      _vm._v(_vm._s(recentlyStory.time)),
+                                    ]),
+                                  ]),
+                                ]
+                              )
+                            }
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "divider" }, [
+                            _vm._v("Viewed Stories"),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(
+                            _vm.viewedStories,
+                            function (viewedStory, index) {
+                              return _c(
+                                "div",
+                                {
+                                  key: "A" + index,
+                                  staticClass: "single-story",
+                                },
+                                [
+                                  _c("div", { staticClass: "story-dp seen" }, [
+                                    _c("img", {
+                                      attrs: { src: viewedStory.avatar },
+                                    }),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "story-author" }, [
+                                    _c("p", { staticClass: "name" }, [
+                                      _vm._v(_vm._s(viewedStory.name)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("p", { staticClass: "time" }, [
+                                      _vm._v(_vm._s(viewedStory.time)),
+                                    ]),
+                                  ]),
+                                ]
+                              )
+                            }
+                          ),
+                        ],
+                        2
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-12" }, [
-            _c("div", { staticClass: "section-title text-center mb-4 pb-2" }, [
-              _c("h4", { staticClass: "title mb-4" }, [_vm._v("Stories")]),
-            ]),
-          ]),
+    return _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "section-title text-center mb-4 pb-2" }, [
+          _c("h4", { staticClass: "title mb-4" }, [_vm._v("Stories")]),
         ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "widget-header" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-xl-12 col-md-12 col-sm-12 col-12" }, [
+          _c("h4", { staticClass: "pb-0" }, [_vm._v("Stories")]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "single-story" }, [
+      _c("div", { staticClass: "story-dp" }, [
+        _c("img", {
+          attrs: { src: "https://bootdey.com/img/Content/avatar/avatar7.png" },
+        }),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "story-author" }, [
+        _c("p", { staticClass: "name" }, [_vm._v("John Doe")]),
         _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-4 layout-spacing" }, [
-            _c("div", { staticClass: "statbox widget box box-shadow" }, [
-              _c("div", { staticClass: "widget-header" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-xl-12 col-md-12 col-sm-12 col-12" },
-                    [_c("h4", { staticClass: "pb-0" }, [_vm._v("Stories")])]
-                  ),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "widget-content widget-content-area" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-12 col-md-12 col-sm-12" }, [
-                    _c(
-                      "div",
-                      { staticClass: "tabcontent", attrs: { id: "content_2" } },
-                      [
-                        _c("div", { staticClass: "story-container-2" }, [
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar7.png",
-                                },
-                              }),
-                              _vm._v(" "),
-                              _c("img", {
-                                staticClass: "add-story",
-                                attrs: { src: "assets/img/plus.png" },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("John Doe"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Tap to add a story"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "divider" }, [
-                            _vm._v("Recently Added"),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar6.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Katharina Nielsen"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar1.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Katharina Nielsen"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar2.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Katharina Nielsen"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar3.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Katharina Nielsen"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar7.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Flownadn Browerty"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar6.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Vretihg Folsenthww"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp unseen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar7.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Katharina Nielsen"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 12:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "divider" }, [
-                            _vm._v("Viewed Stories"),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp seen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar8.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("jonh Doe"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 02:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp seen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar3.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Cartmanson Lawson"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 02:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp seen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar4.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Martirty mclow"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 02:33"),
-                              ]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "single-story" }, [
-                            _c("div", { staticClass: "story-dp seen" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "https://bootdey.com/img/Content/avatar/avatar2.png",
-                                },
-                              }),
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "story-author" }, [
-                              _c("p", { staticClass: "name" }, [
-                                _vm._v("Martha Lawson"),
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "time" }, [
-                                _vm._v("Today, 02:33"),
-                              ]),
-                            ]),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "widget-footer p-2 text-center bg-light-primary",
-                },
-                [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-primary strong",
-                      attrs: { href: "#" },
-                    },
-                    [_vm._v("View All")]
-                  ),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
+        _c("p", { staticClass: "time" }, [_vm._v("Tap to add a story")]),
       ]),
     ])
   },

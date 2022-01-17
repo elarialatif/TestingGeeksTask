@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/features','App\Http\Controllers\ApiController@home');
 Route::get('/team','App\Http\Controllers\ApiController@home');
+// Route::get('/currentUser','App\Http\Controllers\ApiController@stories');
+Route::get('/recentlyStories','App\Http\Controllers\ApiController@stories');
+Route::get('/viewedStories','App\Http\Controllers\ApiController@stories');
 

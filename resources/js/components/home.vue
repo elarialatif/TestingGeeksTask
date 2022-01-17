@@ -88,7 +88,6 @@ export default {
             axios.get('/api/features').then(res => {
                 if (res.data.success === true)
                     this.features = res.data.features
-                    console.log(this.features);
             }).catch(err => {
                 console.log(err)
             })

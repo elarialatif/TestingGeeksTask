@@ -1,6 +1,9 @@
 <template>
     <div>
         <div class="container">
+            <div class="row">
+                <router-link to="/home" class="menuLink">Home</router-link>
+            </div>
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="section-title text-center mb-4 pb-2">
@@ -27,7 +30,6 @@
                                             <div class="single-story">
                                                 <div class="story-dp">
                                                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png">
-                                                    <img src="assets/img/plus.png" class="add-story">
                                                 </div>
                                                 <div class="story-author">
                                                     <p class="name">John Doe</p>
@@ -35,113 +37,29 @@
                                                 </div>
                                             </div>
                                             <p class="divider">Recently Added</p>
-                                            <div class="single-story">
+                                            <div class="single-story" v-for="(recentlyStory, index) in recentlyStories" :key="index">
                                                 <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                                    <img :src="recentlyStory.avatar">
                                                 </div>
                                                 <div class="story-author">
-                                                    <p class="name">Katharina Nielsen</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Katharina Nielsen</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Katharina Nielsen</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Katharina Nielsen</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Flownadn Browerty</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Vretihg Folsenthww</p>
-                                                    <p class="time">Today, 12:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp unseen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Katharina Nielsen</p>
-                                                    <p class="time">Today, 12:33</p>
+                                                    <p class="name">{{ recentlyStory.name }}</p>
+                                                    <p class="time">{{ recentlyStory.time }}</p>
                                                 </div>
                                             </div>
                                             <p class="divider">Viewed Stories</p>
-                                            <div class="single-story">
+                                            <div class="single-story" v-for="(viewedStory, index) in viewedStories" :key="'A'+ index">
                                                 <div class="story-dp seen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar8.png">
+                                                    <img :src="viewedStory.avatar">
                                                 </div>
                                                 <div class="story-author">
-                                                    <p class="name">jonh Doe</p>
-                                                    <p class="time">Today, 02:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp seen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Cartmanson Lawson</p>
-                                                    <p class="time">Today, 02:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp seen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Martirty mclow</p>
-                                                    <p class="time">Today, 02:33</p>
-                                                </div>
-                                            </div>
-                                            <div class="single-story">
-                                                <div class="story-dp seen">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                                                </div>
-                                                <div class="story-author">
-                                                    <p class="name">Martha Lawson</p>
-                                                    <p class="time">Today, 02:33</p>
+                                                    <p class="name">{{ viewedStory.name }}</p>
+                                                    <p class="time">{{ viewedStory.time }}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="widget-footer p-2 text-center bg-light-primary">
-                            <a class="text-primary strong" href="#">View All</a>
                         </div>
                     </div>
                 </div>
@@ -155,13 +73,32 @@
 export default {
     data() {
         return {
+            recentlyStories: [],
+            viewedStories: [],
         }
     },
     methods: {
-        
+        getRecentlyStoriesList() {
+            axios.get('/api/recentlyStories').then(res => {
+                if (res.data.success === true)
+                    this.recentlyStories = res.data.recentlyStories
+            }).catch(err => {
+                console.log(err)
+            })
+        },
+        getViewedStoriesList() {
+            axios.get('/api/viewedStories').then(res => {
+                if (res.data.success === true)
+                    this.viewedStories = res.data.viewedStories
+            }).catch(err => {
+                console.log(err)
+            })
+        },
 
     },
     mounted() {
+        this.getRecentlyStoriesList();
+        this.getViewedStoriesList();
     }
 };
 </script>
@@ -169,6 +106,11 @@ export default {
 body{
     background:#eee;
     margin-top:20px;
+}
+.menuLink{
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 1rem;
 }
 .widget {
     padding: 0;
